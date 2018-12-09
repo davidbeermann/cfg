@@ -10,3 +10,13 @@ fi
 echo ".dot" >> .gitignore
 
 git clone --bare git@github.com:davidbeermann/dot.git "$HOME/.dot"
+
+# Install Nextcloud client
+# https://nextcloud.com/clients/
+# https://launchpad.net/~nextcloud-devs/+archive/ubuntu/client
+sudo add-apt-repository ppa:nextcloud-devs/client
+sudo apt update
+sudo apt install nextcloud-client -y
+
+echo "Manual installs"
+echo "Keeweb: https://keeweb.info/"
