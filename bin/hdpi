@@ -1,0 +1,32 @@
+#!/bin/bash
+
+GNOME_SETTING=$(gsettings get org.gnome.desktop.interface scaling-factor)
+#echo $GNOME_SETTING
+
+# Substring extraction
+# https://stackoverflow.com/questions/428109/extract-substring-in-bash
+#echo $(echo $GNOME_SETTING| cut -d' ' -f 2)
+#echo ${GNOME_SETTING#* }
+
+# Array solution, not working
+# https://stackoverflow.com/questions/1469849/how-to-split-one-string-into-multiple-strings-separated-by-at-least-one-space-in 
+#ARR=($GNOME_SETTING)
+#echo "$ARR"
+#echo "${ARR[1]}"
+#SCALING_FACTOR=${("$GNOME_SETTING")[1]}
+
+SCALING_FACTOR=${GNOME_SETTING#* }
+
+if [ "$SCALING_FACTOR" -eq "2" ]; then
+    echo "In Laptop mode, switching to Desktop mode"
+    gsettings set org.gnome.desktop.interface scaling-factor 1
+    gsettings set org.gnome.desktop.interface text-scaling-factor 1
+    # https://wiki.gnome.org/HowDoI/HiDpi
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <1>}]"
+else
+    echo "In Desktop mode, switching to Laptop mode"
+    gsettings set org.gnome.desktop.interface scaling-factor 2
+    gsettings set org.gnome.desktop.interface text-scaling-factor 0.85
+    # https://wiki.gnome.org/HowDoI/HiDpi
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <2>}]"
+fi
