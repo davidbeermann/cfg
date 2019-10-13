@@ -1,0 +1,39 @@
+# Prevent recursion
+.dotdotdot/
+# Default home directories
+Desktop/
+Downloads/
+Music/
+Pictures/
+Public/
+Templates/
+Videos/
+.cache/
+.config/
+.gnupg/
+.local/
+.pki/
+.ssh/
+.swt/
+# Default home files
+.ICEauthority
+.bash_history
+.bash_logout
+.gtk-bookmarks
+.pam_environment
+.shell.pre-oh-my-zsh
+.sudo_as_admin_successful
+.wget-hsts
+.zcompdump
+.zcompdump-pop-os-5.5.1
+.zsh_history
+# Custom directories
+AppImages/
+Nextcloud/
+# Binary/Application directories
+.eclipse/
+.mozilla/
+.nvm/
+.oh-my-zsh/
+.thunderbird/
+.vscode-oss/
