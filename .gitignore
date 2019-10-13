@@ -1,3 +1,6 @@
+# https://git-scm.com/docs/gitignore
+# ----------------------------------
+
 # Prevent recursion
 .dotdotdot/
 
@@ -10,7 +13,7 @@ Public/
 Templates/
 Videos/
 .cache/
-.config/
+.config/*
 .gnupg/
 .local/
 .pki/
@@ -45,3 +48,9 @@ Nextcloud/
 .oh-my-zsh/
 .thunderbird/
 .vscode-oss/
+
+# Included app configurations
+# https://stackoverflow.com/a/5534865
+!.config/albert
+.config/albert/*
+!.config/albert/!albert.conf
