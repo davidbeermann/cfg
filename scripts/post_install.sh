@@ -2,4 +2,5 @@
 
 # Usefull binaries from distribution 
 sudo apt update --quiet && sudo apt install --yes \
-  gnome-tweaks
+  gnome-tweaks \
+  google-chrome-stable
