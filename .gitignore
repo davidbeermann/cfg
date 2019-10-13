@@ -1,5 +1,6 @@
 # Prevent recursion
 .dotdotdot/
+
 # Default home directories
 Desktop/
 Downloads/
@@ -15,6 +16,7 @@ Videos/
 .pki/
 .ssh/
 .swt/
+
 # Default home files
 .ICEauthority
 .bash_history
@@ -27,10 +29,15 @@ Videos/
 .zcompdump
 .zcompdump-pop-os-5.5.1
 .zsh_history
+
 # Custom directories
 AppImages/
 Nextcloud/
 .fonts/
+
+# Secret files
+.profile_secrets
+
 # Binary/Application directories
 .eclipse/
 .mozilla/
