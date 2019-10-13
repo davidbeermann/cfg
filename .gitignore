@@ -30,6 +30,7 @@ Videos/
 # Custom directories
 AppImages/
 Nextcloud/
+.fonts/
 # Binary/Application directories
 .eclipse/
 .mozilla/
