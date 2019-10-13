@@ -14,3 +14,7 @@ ddd checkout
 ddd config --local --add user.name "David Beermann"
 ddd config --local --add user.email "mail@davidbeermann.com"
 ```
+
+## Current OS
+
+Running [Pop!_OS](https://system76.com/pop) (Ubuntu 19.04)
