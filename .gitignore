@@ -37,6 +37,9 @@ Videos/
 AppImages/
 Nextcloud/
 .fonts/
+.node-gyp/
+.npm/
+.yarnrc
 
 # Secret files
 .profile_secrets
