@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Usefull binaries from distribution
+# ----------------------------------
+# Peek – Screencast utility: https://github.com/phw/peek
 sudo apt update --quiet && sudo apt install --yes \
   gnome-tweaks \
   google-chrome-stable \
