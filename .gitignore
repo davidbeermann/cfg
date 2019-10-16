@@ -38,12 +38,14 @@ Videos/
 AppImages/
 Nextcloud/
 .fonts/
+.gnome/
 .node-gyp/
 .npm/
 .yarnrc
 
 # Secret files
 .profile_secrets
+.vault-token
 
 # Binary/Application directories
 .eclipse/
