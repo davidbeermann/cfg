@@ -6,6 +6,8 @@ BASEDIR=$(dirname "$0")
 . "$BASEDIR/.functions.sh"
 
 # https://itsfoss.com/install-fonts-ubuntu/
+# https://wiki.ubuntu.com/Fonts
+# TODO: According to comment in /etc/fonts/fonts.conf ~/.fonts will be removed in the future.
 DIR_FONTS="$HOME/.fonts"
 mkdir -p "$DIR_FONTS"
 
@@ -17,6 +19,10 @@ echo "Fetching Cascadia Code from GitHub"
 # https://github.com/microsoft/cascadia-code
 URL=$(fetch_github_download_url "microsoft/cascadia-code" ".*ttf")
 fetch_file -O "cascadia-code.ttf" "$URL"
+
+echo "2. Rebuild font cache"
+# This ensures the new user fonts are indexed
+sudo fc-cache -f
 
 # TypeCatcher is part of Ubuntu repository:
 # https://launchpad.net/ubuntu/disco/+source/typecatcher
