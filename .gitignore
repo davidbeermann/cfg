@@ -47,13 +47,22 @@ Nextcloud/
 .profile_secrets
 .vault-token
 
-# Binary/Application directories
+# Application directories
 .eclipse/
 .mozilla/
 .nvm/
 .oh-my-zsh/
 .thunderbird/
 .vscode-oss/
+.arduino15/
+.java/
+.oracle_jre_usage/
+.pEp/
+.pEp_management.db
+.pEp_management.db-shm
+.pEp_management.db-wal
+.viminfo
+Arduino/
 
 # Included app configurations
 # https://stackoverflow.com/a/5534865

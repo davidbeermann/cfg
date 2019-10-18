@@ -1,8 +1,15 @@
 # This function is used to fetch a file
 # and write the out to the file system.
-# Requires for argument -O ... to be defined!
+# Use the argument -O ... for specific file name.
 fetch_file()
 {
+  # https://stackoverflow.com/a/26759734
+  if ! [ -x "$(command -v wget)" ]; then
+    echo 'Error: wget is not installed.' >&2
+    exit 1
+  fi
+
+  # https://stackoverflow.com/a/29457649
   wget -q --show-progress --progress=bar:force:noscroll $@
 }
 
@@ -21,7 +28,6 @@ fetch_github_download_url()
   fi
 
   # https://gist.github.com/lukechilds/a83e1d7127b78fef38c2914c4ececc3c
-  # https://stackoverflow.com/a/29457649
   fetch_data "https://api.github.com/repos/$1/releases/latest" \
     | grep "\"browser_download_url\": \"$2\"" \
     | sed -E 's/.*"([^"]+)".*/\1/'
