@@ -77,6 +77,20 @@ alias docr="docker container run"
 alias doce="docker container exec"
 alias docei="docker container exec -it"
 
+# Find content in files
+# https://stackoverflow.com/a/17231293
+# https://bash.cyberciti.biz/guide/Default_shell_variables_value
+# TODO: finish 
+# grfcc()
+# {
+#   NEEDLE="$1"
+#   HAYSTACK="${2:-$(pwd)/*}"
+#   echo "$NEEDLE"
+#   echo "$HAYSTACK"
+#   grep -rnisI "$NEEDLE" "$HAYSTACK"
+# }
+alias grfc="grep -rnisI $@"
+
 # WIP
 # alias ff="sudo find $0 -type f -iname $1"
 # alias ffg="sudo find / -type f -iname $@"
