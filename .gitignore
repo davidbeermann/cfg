@@ -37,6 +37,7 @@ Videos/
 # Custom directories
 AppImages/
 Nextcloud/
+Workspaces/
 .fonts/
 .gnome/
 .node-gyp/
