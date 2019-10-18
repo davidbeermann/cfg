@@ -64,9 +64,12 @@ Workspaces/
 .pEp_management.db-wal
 .viminfo
 Arduino/
+.vuescan/*
 
 # Included app configurations
 # https://stackoverflow.com/a/5534865
 !.config/albert
 .config/albert/*
 !.config/albert/!albert.conf
+!.vuescan/vuescan.ini
+
