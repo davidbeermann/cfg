@@ -2,14 +2,17 @@
 
 # Usefull binaries from distribution
 # ----------------------------------
+# GNOME Sushi – File Preview in Nautilus Desktop: https://gitlab.gnome.org/GNOME/sushi
 # Peek – Screencast utility: https://github.com/phw/peek
 sudo apt update --quiet && sudo apt install --yes \
+  gnome-sushi \
   gnome-tweaks \
   google-chrome-stable \
   htop \
   peek \
   slack-desktop \
-  thunderbird
+  thunderbird \
+  vim
 
 # Increase the amount of inotify file watchers
 # https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers
