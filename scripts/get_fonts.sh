@@ -15,6 +15,16 @@ echo "1. Installing user fonts:"
 echo "$DIR_FONTS"
 echo "-------------------------"
 cd "$DIR_FONTS"
+
+echo "Fetching Hack from GitHub"
+# https://sourcefoundry.org/hack/
+URL=$(fetch_github_download_url "source-foundry/Hack" ".*ttf.tar.gz")
+fetch_file -O "hack.tar.gz" "$URL"
+tar -xf hack.tar.gz
+mv ttf/* .
+rm -drf ttf
+rm hack.tar.gz
+
 echo "Fetching Cascadia Code from GitHub"
 # https://github.com/microsoft/cascadia-code
 URL=$(fetch_github_download_url "microsoft/cascadia-code" ".*ttf")
