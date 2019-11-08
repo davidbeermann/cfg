@@ -32,3 +32,21 @@ fetch_github_download_url()
     | grep "\"browser_download_url\": \"$2\"" \
     | sed -E 's/.*"([^"]+)".*/\1/'
 }
+
+install_deb()
+{
+  # https://stackoverflow.com/a/26759734
+  if ! [ -x "$(command -v apt)" ]; then
+    echo 'Error: apt is not installed.' >&2
+    exit 1
+  fi
+
+  if [ -z "$1" ]; then
+    echo "Missing argument!"
+    exit 1
+  fi
+
+  # https://askubuntu.com/a/795048
+  # https://manpages.debian.org/buster/apt/apt-get.8.en.html
+  sudo apt --quiet --assume-yes --fix-broken install "$1"
+}
