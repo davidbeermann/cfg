@@ -26,4 +26,8 @@ sudo apt update -q && sudo apt install -y \
   docker-ce-cli \
   containerd.io
 
+# This allows running docker without sudo ...
+echo "4. Add current user to docker group"
+sudo usermod -aG docker "$USER"
+
 exit 0
