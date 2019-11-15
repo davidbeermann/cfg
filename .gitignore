@@ -30,8 +30,7 @@ Videos/
 .shell.pre-oh-my-zsh
 .sudo_as_admin_successful
 .wget-hsts
-.zcompdump
-.zcompdump-pop-os-5.5.1
+.zcompdump*
 .zsh_history
 
 # Custom directories
@@ -47,6 +46,8 @@ Workspaces/
 # Secret files
 .profile_secrets
 .vault-token
+bin/FoxitReader
+bin/wl
 
 # Application directories
 .eclipse/
@@ -65,6 +66,7 @@ Workspaces/
 .viminfo
 Arduino/
 .vuescan/*
+opt/foxitsoftware
 
 # Included app configurations
 # https://stackoverflow.com/a/5534865
