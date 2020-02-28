@@ -13,7 +13,7 @@ echo "1. Adding Debian package repository"
 # https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert
 curl -sS https://build.opensuse.org/projects/home:manuelschneid3r/public_key \
   | sudo apt-key add -
-echo "deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_19.04/ /" \
+echo "deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_19.10/ /" \
   | sudo tee /etc/apt/sources.list.d/albert.list
 #curl -sS https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_19.04/Release.key \
 #  | sudo apt-key add -
