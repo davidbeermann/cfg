@@ -48,6 +48,7 @@ Workspaces/
 .vault-token
 bin/FoxitReader
 bin/wl
+bin/doctl
 
 # Application directories
 .eclipse/
